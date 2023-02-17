@@ -1792,7 +1792,7 @@ class ResourceState:
                     print(f"{resource.name} {resource_variant} already exists.")
                     continue
 
-                raise e
+                raise Exception(f"Code: {e.code()}: {e.details()}")
 
 
 ## Executor Providers
